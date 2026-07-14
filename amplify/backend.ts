@@ -12,5 +12,5 @@ const backend = defineBackend({
 
 const customResourceStack = backend.createStack('CustomResources');
 
-new sqs.Queue(customResourceStack, 'SampleQueue');
+new sqs.Queue(customResourceStack, 'SampleQueue1');
 new sns.Topic(customResourceStack, 'SampleTopic');
