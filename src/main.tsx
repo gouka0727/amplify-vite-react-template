@@ -5,7 +5,15 @@ import "./index.css";
 import { Amplify } from "aws-amplify";
 import outputs from "../amplify_outputs.json";
 
-Amplify.configure(outputs);
+Amplify.configure({
+  ...outputs,
+  Storage: {
+    S3: {
+      bucketName: "test-wu-amplify",
+      awsRegion: "ap-northeast-1",
+    },
+  },
+});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
