@@ -9,8 +9,8 @@ Amplify.configure({
   ...outputs,
   Storage: {
     S3: {
-      bucketName: "test-wu-amplify",
-      awsRegion: "ap-northeast-1",
+      bucket: "test-wu-amplify",
+      region: "ap-northeast-1",
     },
   },
 });
